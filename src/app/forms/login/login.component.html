@@ -1,0 +1,32 @@
+<form [formGroup]="form">
+   
+    <div class="container">
+      <div class="text-center">
+        <h2 class="text-theme-primary">Login</h2>
+        <p>Please enter your information to log in</p>
+        <div *ngIf="error" class="alert ">Email and password do not match!</div>
+        <div *ngIf="success" class="alert alert-success">Wait for owner to approve your account</div>
+        <div *ngIf="success2" class="alert alert-success">You have successfully registered your account </div>
+    </div>
+    <label for="email"><b>Email</b></label>
+    <input formControlName="email" id="email" type="text" placeholder="Enter your email">
+    <div *ngIf="Email?.touched && Email?.invalid">
+        <div *ngIf="Email?.errors?.['required']" class="alert ">Email is required</div>
+    </div>
+    <br>
+    <br>
+    <label for="password"><b>Password</b></label>
+    <input formControlName="password" id="password" type="password" placeholder="Enter your password">
+    <div *ngIf="Password?.touched && Password?.invalid">
+        <div *ngIf="Password?.errors?.['required']" class="alert ">Password is required</div>
+    </div>
+      <button type="submit" (click)="login()">Log in</button>
+      <div class="container" >
+    
+    <span> <a routerLink="/register" routerLinkActive="active">Dont have an account?</a></span>
+     <!--<span class="psw"><a routerLink="/changepw">Forgot password?</a></span>--> 
+
+    </div>
+</div>
+</form>
+

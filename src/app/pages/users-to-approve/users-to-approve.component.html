@@ -1,0 +1,58 @@
+<section>
+    <div class="col-md-12 text-center">
+        <br>
+        <h1 class="text-theme-primary">Users</h1>
+      </div>
+      <br> 
+      <div *ngIf="users.length === 0">
+        <p class="row justify-content-center">No users to approve</p>
+      </div>
+      <div  *ngIf="users.length != 0" class="tabela-container">
+          <table mat-table [dataSource]="users">
+              <ng-container matColumnDef="ime">
+                  <th mat-header-cell *matHeaderCellDef>Ime</th>
+                  <td mat-cell *matCellDef="let user">{{ user.firstName }}</td>
+      </ng-container>
+    <ng-container matColumnDef="prezime">
+        <th mat-header-cell *matHeaderCellDef>Prezime</th>
+        <td mat-cell *matCellDef="let user">{{ user.lastName}}</td>
+    </ng-container>
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let user">{{ user.userName}}</td>
+    </ng-container>
+    <ng-container matColumnDef="uloga">
+        <th mat-header-cell *matHeaderCellDef>User Role</th>
+        <td mat-cell *matCellDef="let user">
+          <ng-container *ngIf="user.roleId === 3">
+            Donator
+          </ng-container>
+          <ng-container *ngIf="user.roleId === 2">
+            Courier
+          </ng-container>
+        </td>
+      </ng-container>
+    <ng-container matColumnDef="dugme1">
+        <th mat-header-cell *matHeaderCellDef>Approve</th>
+        <td mat-cell *matCellDef="let store"> <div class="example-button-container">
+            <button (click)="update(store.id)" mat-mini-fab class="odobri" aria-label="Example icon button with a filter list icon">
+              <mat-icon>check</mat-icon>
+            </button>
+          </div></td>
+    </ng-container>
+
+    <ng-container matColumnDef="dugme2">
+        <th mat-header-cell *matHeaderCellDef>Delete</th>
+        <td mat-cell *matCellDef="let store"> <div class="example-button-container">
+            <button (click)="delete(store.id)" mat-mini-fab class="izbrisi" aria-label="Example icon button with a filter list icon">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div></td>
+    </ng-container>
+
+   
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</div>
+</section>

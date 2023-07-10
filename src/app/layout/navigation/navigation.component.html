@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <div class="collapse navbar-collapse justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item mr-5"> 
+                    <a routerLink="/"  class="nav-link">Home</a>
+                </li>
+                <!-- <li class="nav-item mr-5" *ngIf="userService.isLogedIn()">
+                    <a routerLink="" class="nav-link">Your resevations</a>
+                </li> -->
+                <li class="nav-item mr-5" *ngIf="!userService.isLogedIn()">
+                    <a routerLink="/login" class="nav-link">Sign up/Login</a>
+                </li>
+                <li class="nav-item mr-5" *ngIf="userService.isOwner()">
+                    <a routerLink="/approve" class="nav-link" *ngIf="userService.isOwner()">Users To Approve</a>
+                </li>
+                <li class="nav-item mr-5" *ngIf="userService.isBenefitiary()">
+                    <a  class="nav-link" *ngIf="userService.isBenefitiary()">Recived Donations</a>
+                </li>
+                <li class="nav-item mr-5" *ngIf="userService.isCourier()">
+                    <a routerLink="/receipts" class="nav-link" *ngIf="userService.isCourier()">Donations and Benefitiaries</a>
+                </li> 
+            </ul>
+        </div>
+        
+        <mat-icon *ngIf="!userService.hasImage() && userService.isLogedIn()" aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
+        
+          
+        <img *ngIf="userService.hasImage()" class="profile-image" [src]="user.image" alt="">
+        
+        <button *ngIf="userService.isLogedIn()" mat-button [matMenuTriggerFor]="menu" class="menu">{{user.firstName}} {{user.lastName}}</button>
+         <mat-menu #menu="matMenu">
+             <span><a  mat-menu-item (click)="openInfo(user.id)" routerLinkActive="active">Edit profile</a></span>
+             <span><a  mat-menu-item  (click)="ChangePassword(user.id)" routerLinkActive="active">Change password</a></span>
+             <span><a  mat-menu-item  (click)="ChangeVisibility(user.id)" routerLinkActive="active" *ngIf="userService.isDonator()">Change anonimity status</a></span>
+             <button mat-menu-item routerLink="/" (click)="logout()">Logout</button>
+        </mat-menu>
+        <button *ngIf="userService.isDonator() || userService.isOwner()" mat-button [matMenuTriggerFor]="menu2" class="menu">
+            <mat-icon>hotel</mat-icon>
+        </button>
+        <mat-menu #menu2="matMenu">
+            <span><a  mat-menu-item routerLink="/addAcc" *ngIf="userService.isOwner()"  routerLinkActive="active">Add accommodation unit</a></span>
+          </mat-menu>
+    </div>
+</nav>
+

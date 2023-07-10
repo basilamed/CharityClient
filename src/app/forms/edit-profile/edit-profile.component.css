@@ -1,0 +1,62 @@
+
+button{
+    margin: 0 auto;
+    display: block;
+    width: 45%;
+    max-width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f19f10;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+button:hover {
+  background-color: #FB6107
+  }
+span{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
+}
+
+form {
+  border: 3px solid #f3df2c98;
+    width: 45%;
+    margin:auto;
+    margin-top: 40px;
+    margin-bottom: 40px ;
+  }
+  .form-group{
+    padding: 15px;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password], input[type=file], input[type=date] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .image-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .round-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  .errors {
+    background-color: #eeeeee;
+    color: #FB6107
+  }

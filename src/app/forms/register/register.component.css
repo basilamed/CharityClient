@@ -1,0 +1,70 @@
+/* Add padding to containers */
+.container {
+    padding: 16px;
+  } 
+  
+
+  form {
+    border: 3px solid #f3df2c98;
+    width: 40%;
+    margin:auto;
+    margin-top: 40px;
+    margin-bottom: 40px ;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password]  , input[type=date]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Add a blue text color to links */
+  a{
+    text-decoration: none;
+    color: #5C8001;
+  }
+  a:hover{
+    color: #c09d63;
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+
+  .alert {
+    background-color: #eeeeee;
+    color: #FB6107
+  }
+  .pass-info{
+    color: #7CB518;
+    font-size: x-small;
+    text-align: right;
+  }
+
+  /* Set a style for all buttons */
+  button {
+    background-color: #f19f10;
+    color: #fff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    background-color: #FB6107
+  }

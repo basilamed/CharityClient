@@ -1,0 +1,68 @@
+<div class="container">
+    <form [formGroup]="form">
+      <div class="row">
+        <div class="text-center">
+          <br>
+          <h1 class="text-theme-primary">Edit profile</h1>
+          <p>Please fill in this form edit your profile</p>
+          <div class="alert alert-danger" *ngIf="error">Something went wrong</div>
+          <div class="alert alert-success" *ngIf="success">You have successfully updated ypur profile</div>
+        </div>
+      </div> 
+      <div class="image-cont">
+        <mat-icon *ngIf="!userService.hasImage()" aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
+        <img *ngIf="userService.hasImage()" src={{image}} alt="Profilna slika" class="round-image">
+    </div>
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input formControlName="name" type="text" class="form-control" id="name" placeholder="Enter your First name">
+            <div *ngIf="Name?.touched && Name?.invalid">
+              <p *ngIf="Name?.errors?.['required']" class="errors">Name is required</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="surname">Your Last Name</label>
+            <input formControlName="surname" type="text" class="form-control" id="surname" placeholder="Enter your Last name">
+            <div *ngIf="Surname?.touched && Surname?.invalid">
+              <p *ngIf="Surname?.errors?.['required']" class="errors">Name is required</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="surname">Your City</label>
+            <input formControlName="city" type="text" class="form-control" id="city" placeholder="Enter your City">
+            <div *ngIf="City?.touched && City?.invalid">
+              <p *ngIf="City?.errors?.['required']" class="errors">City is required</p>
+              <p *ngIf="City?.errors?.['notSerbianCity']" class="alert ">Choose a city in Serbia and write it in correct latin</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="surname">Your Address</label>
+            <input formControlName="address" type="text" class="form-control" id="address" placeholder="Enter your Address">
+            <div *ngIf="Address?.touched && Surname?.invalid">
+              <p *ngIf="Address?.errors?.['required']" class="errors">Address is required</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="birthday"><b>Birthday</b></label>
+                <input formControlName="birthday" id="birthday" type="date" placeholder="Enter your birthday">
+                <div *ngIf="Birthday?.touched && Birthday?.invalid">
+                    <div *ngIf="Birthday?.errors?.['required']" class="alert ">Birthday is required</div>
+                    <div *ngIf="Birthday?.errors?.['age']" class="alert ">You have to be over 16 to sign up</div>
+                </div>
+          </div>
+          
+      <div class="form-group">
+        <label for="image">Upload Image</label>
+        <input formControlName="image" type="file" accept="image/*" (change)="onImageSelected($event)" class="form-control" id="imageInput">
+        <div *ngIf="Image?.touched && Image?.invalid">
+          <p *ngIf="Image?.errors?.['required']" class="errors">Image is required</p>
+        </div>
+      </div>
+      <br>
+     <span>
+      <button (click)="updateUser()">Update Profile</button>
+      <button (click)="openConfirmationDialog()">Delete Profile</button>
+    </span>
+    
+    </form>
+    </div>

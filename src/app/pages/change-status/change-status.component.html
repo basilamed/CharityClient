@@ -1,0 +1,31 @@
+<div *ngIf="user.status == false" class="text">
+    <div>
+        <h1>Your current status is: Not Anonymous</h1>
+    </div>
+    <div class="visibility-description">
+        <h1>Description</h1>
+        <p>When you change your visibility status to 'Anonymous,' your profile and associated information will no longer be visible to other users. This means that your profile won't appear in search results, and others won't be able to view your profile details.</p>
+      </div>
+      
+      <div class="visibility-warning">
+        <h1>Warning</h1>
+        <p>Please note that changing your visibility status to 'Anonymous' will limit your interaction with other users. You won't be able to receive messages or requests from other users, and your profile won't be accessible to potential connections.</p>
+      </div>
+      <button (click)="changeStatus()">Change my status to Anonymous</button>
+</div>
+<div *ngIf="user.status == true" class="text">
+    <div>
+        <h1>Your current status is: Anonymous</h1>
+    </div>
+    <div class="visibility-description">
+        <h1>Description</h1>
+        <p>By changing your visibility status to 'Not Anonymous' your profile and associated information will become visible to other users. This means that your profile can appear in search results, and others will be able to view your profile details.</p>
+      </div>
+      
+      <div class="visibility-warning">
+        <h1>Warning</h1>
+        <p>Keep in mind that changing your visibility status to 'Not Anonymous' will make your profile accessible to other users. You may receive messages and connection requests from other users who find your profile in search results. Please ensure that you are comfortable with potential interactions before making this change.</p>
+      </div>
+      <button (click)="changeStatus()">Change my status to Not Anonymous</button>
+</div>
+  

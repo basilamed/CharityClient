@@ -1,0 +1,34 @@
+
+nav{
+    height: 50px;
+    background-color: rgb(232, 232, 232);
+    width: 100%;
+}
+
+.nav-link{
+    text-transform: uppercase;
+    color: #0f283c; 
+}
+.nav-link:hover{
+    opacity: 0.9;
+}
+
+.nav-item{
+    margin-right: 10px;
+}
+
+.profile-image {
+    width: 40px; /* Prilagodite veličinu prema potrebi */
+    height: 40px; /* Prilagodite veličinu prema potrebi */
+    border-radius: 50%; /* Postavlja okrugli oblik */
+  }
+
+  .demo-section{
+    margin-left: 50px;
+    margin-right: 10px;
+  }
+
+  .menu{
+    border: none;
+    background-color: rgb(232, 232, 232);
+  }

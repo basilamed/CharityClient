@@ -1,0 +1,67 @@
+.home-hotel{
+    width: 100%;
+    height: auto;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    padding: 25px;
+    color: #0f283c;
+    transition: transform 0.5s ease-out;
+}
+a{
+    color: #c0954f;
+    font-size: larger;
+}
+
+span{
+    padding: 20px;
+} 
+.srednji{
+    width: 65%;
+    margin: auto;
+}
+.middle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.left{
+    width: 45%;
+    height: auto;
+    padding: 20px;
+}
+.left img, .right img{
+    width: 90%;
+    height: auto;
+    transition: transform 0.5s ease-out;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.left :hover, .right :hover, h2:hover, p:hover{
+    transform: scale(1.1);
+}
+
+p{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    transition: transform 0.5s ease-out;
+    text-align: justify;
+}
+.right{
+    width: 50%;
+    height: auto;
+    padding: 20px;
+}
+h2{
+    transition: transform 0.5s ease-out;
+    margin: auto;
+}

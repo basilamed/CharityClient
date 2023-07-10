@@ -1,0 +1,45 @@
+.visibility-description, .visibility-warning {
+    margin-bottom: 20px;
+  }
+  
+  .visibility-description h1, .visibility-warning h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .visibility-description p, .visibility-warning p {
+    font-size: 16px;
+  }
+  .text{
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+    text-align: justify;
+  }
+  h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #013504;
+    padding: 20px;
+  }
+  button{
+    margin: 0 auto;
+    display: block;
+    width: 45%;
+    max-width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f19f10;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+button:hover {
+  background-color: #FB6107
+  }
+  .visibility-warning {
+    color: #FB6107;
+    border-radius: 5px;
+  }

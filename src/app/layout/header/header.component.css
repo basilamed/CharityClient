@@ -1,0 +1,14 @@
+nav {
+    height: 90px;
+    width: 100%;
+    background-color: #5C8001;
+}
+
+.site-logo {
+    padding: 10px 20px;
+}
+
+img{
+    height: 85px;
+    margin:auto;
+}

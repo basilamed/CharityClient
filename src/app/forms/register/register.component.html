@@ -1,0 +1,110 @@
+<form [formGroup]="form" (ngSubmit)="register()">
+  
+    <div class="container">
+      <div class="text-center">
+        <h2 class="text-theme-primary">Register</h2>
+        <p>Please fill in this form to create an account.</p>
+        <div *ngIf="error" class="alert ">Email already registered!</div>
+    </div>
+    <label for="fname"><b>First name</b></label>
+    <input formControlName="fname" id="fname" type="text" placeholder="Enter your first name">
+    <div *ngIf="Fname?.touched && Fname?.invalid">
+        <div *ngIf="Fname?.errors?.['required']" class="alert ">First name is required</div>
+        <div *ngIf="Fname?.errors?.['minlength']" class="alert ">Fname must be at least 3 characters</div>
+        <div class="alert " *ngIf="Fname?.errors?.['fname']">Not good</div>
+        <div class="alert " *ngIf="Fname?.errors?.['cannotContaintSpace']">Can not contain spaces</div>
+    </div>
+    <br>
+    <br>
+    <label for="lname"><b>Last name</b></label>
+    <input formControlName="lname" id="lname" type="text" placeholder="Enter your last name">
+    <div *ngIf="Lname?.touched && Lname?.invalid">
+        <div *ngIf="Lname?.errors?.['required']" class="alert ">Last name is required</div>
+        <div *ngIf="Lname?.errors?.['minlength']" class="alert ">Last name must be at least 3 characters</div>
+        <div class="alert " *ngIf="Lname?.errors?.['lname']">Not good</div>
+        <div class="alert " *ngIf="Lname?.errors?.['cannotContaintSpace']">Can not contain spaces</div>
+    </div>
+    <br>
+    <br>
+    <label for="city"><b>City</b></label>
+    <input formControlName="city" id="city" type="text" placeholder="Enter the city you live in">
+    <div *ngIf="City?.touched && City?.invalid">
+        <div *ngIf="City?.errors?.['required']" class="alert ">City is required</div>
+        <div *ngIf="City?.errors?.['notSerbianCity']" class="alert ">Choose a city in Serbia and write it in correct latin</div>
+    </div>
+    <br>
+    <br>
+    <label for="adress"><b>Address</b></label>
+    <input formControlName="adress" id="Adress" type="text" placeholder="Enter your adress">
+    <div *ngIf="Adress?.touched && Adress?.invalid">
+        <div *ngIf="Adress?.errors?.['required']" class="alert ">Address is required</div>
+    </div>
+    <br>
+    <br>
+    <label for="birthday"><b>Birthday</b></label>
+    <input formControlName="birthday" id="birthday" type="date" placeholder="Enter your birthday">
+    <div *ngIf="Birthday?.touched && Birthday?.invalid">
+        <div *ngIf="Birthday?.errors?.['required']" class="alert ">Birthday is required</div>
+        <div *ngIf="Birthday?.errors?.['age']" class="alert ">You have to be over 16 to sign up</div>
+    </div>
+    <br>
+    <br>
+    <label for="email"><b>Email</b></label>
+    <input formControlName="email" id="email" type="text" placeholder="Enter your email">
+    <div *ngIf="Email?.touched && Email?.invalid">
+        <div *ngIf="Email?.errors?.['required']" class="alert ">Email is required</div>
+        <div *ngIf="Email?.errors?.['minlength']" class="alert ">Email must be at least 3 characters</div>
+        <div class="alert " *ngIf="Email?.errors?.['email']">Not good</div>
+        <div class="alert " *ngIf="Email?.errors?.['cannotContaintSpace']">Can not contain spaces</div>
+    </div>
+    <br>
+    <br>
+    <label for="password"><b>Password</b></label>
+    <input formControlName="password" id="password" type="password" placeholder="Enter your password">
+    <p class="pass-info">Password has to contain at least: one Uppercase letter, one number and one special caracter. 
+      Has to be at least 8 caracters long, and cannot contain spaces.</p>
+    <div *ngIf="Password?.touched && Password?.invalid">
+        <div *ngIf="Password?.errors?.['required']" class="alert ">Password is required</div>
+        <div *ngIf="Password?.errors?.['minlength']" class="alert ">Password must be at least 8 characters</div>
+        <div *ngIf="Password?.errors?.['maxlength']" class="alert ">Password must have max 12 characters</div>
+        <div class="alert " *ngIf="Password?.errors?.['cannotContaintSpace']">Can not contain spaces</div>
+        <div class="alert " *ngIf="Password?.errors?.['upperCase']">Has to contain Uppercase letter</div>
+        <div class="alert " *ngIf="Password?.errors?.['number']">Has to one number</div>
+        <div class="alert " *ngIf="Password?.errors?.['specialCaracter']">Has to one special character</div>
+    </div>
+    <label for="confirmPassword"><b>Confirm password</b></label>
+    <input formControlName="confirmPassword" id="confirmPassword" type="password" placeholder="Confirm your password">
+    <div *ngIf="ConfirmPassword?.touched && ConfirmPassword?.invalid">
+        <div *ngIf="ConfirmPassword?.errors?.['required']" class="alert ">ConfirmPassword is required</div>
+    <div *ngIf="form?.errors?.['passwordMismatch']" class="alert ">Passwords do not match</div>
+</div>
+<br>
+<br>
+<div class="form-group">
+    <label for="role"><b>I register as a</b></label>
+    <div style="display: flex; justify-content: space-between;">
+      <select class="form-control bg-secondary-theme" id="role" formControlName="selectedRole">
+        <option value="4">Beneficiary</option>
+        <option value="3">Donator</option>
+        <option value="2">Courier</option>
+      </select>
+    </div>
+  </div>
+  <br>
+  <div class="form-group" *ngIf="form.get('selectedRole')?.value === '3'">
+    <label for="anonymity"><b>Anonymity</b></label>
+    <div style="display: flex; justify-content: space-between;">
+      <select class="form-control bg-secondary-theme" id="status">
+        <option value="true">Anonymous</option>
+        <option value="false">Not Anonymous</option>
+      </select>
+    </div>
+  </div>
+<br>
+      <button type="submit">Register</button>
+      <div class="container" >
+    <span> <a routerLink="/login" routerLinkActive="active">Already have an account?</a></span>
+    </div>
+</div>
+</form>
+
