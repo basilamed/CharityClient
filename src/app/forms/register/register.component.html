@@ -11,7 +11,7 @@
     <div *ngIf="Fname?.touched && Fname?.invalid">
         <div *ngIf="Fname?.errors?.['required']" class="alert ">First name is required</div>
         <div *ngIf="Fname?.errors?.['minlength']" class="alert ">Fname must be at least 3 characters</div>
-        <div class="alert " *ngIf="Fname?.errors?.['fname']">Not good</div>
+        <div class="alert " *ngIf="Fname?.errors?.['fname']">First name has to start with capital letter</div>
         <div class="alert " *ngIf="Fname?.errors?.['cannotContaintSpace']">Can not contain spaces</div>
     </div>
     <br>
@@ -21,7 +21,7 @@
     <div *ngIf="Lname?.touched && Lname?.invalid">
         <div *ngIf="Lname?.errors?.['required']" class="alert ">Last name is required</div>
         <div *ngIf="Lname?.errors?.['minlength']" class="alert ">Last name must be at least 3 characters</div>
-        <div class="alert " *ngIf="Lname?.errors?.['lname']">Not good</div>
+        <div class="alert " *ngIf="Lname?.errors?.['lname']">Last name has to start with capital letter</div>
         <div class="alert " *ngIf="Lname?.errors?.['cannotContaintSpace']">Can not contain spaces</div>
     </div>
     <br>
@@ -54,7 +54,7 @@
     <div *ngIf="Email?.touched && Email?.invalid">
         <div *ngIf="Email?.errors?.['required']" class="alert ">Email is required</div>
         <div *ngIf="Email?.errors?.['minlength']" class="alert ">Email must be at least 3 characters</div>
-        <div class="alert " *ngIf="Email?.errors?.['email']">Not good</div>
+        <div class="alert " *ngIf="Email?.errors?.['email']">Not email format</div>
         <div class="alert " *ngIf="Email?.errors?.['cannotContaintSpace']">Can not contain spaces</div>
     </div>
     <br>

@@ -1,0 +1,26 @@
+<section class="featured-section col-md-6 " id="section">
+    <div class=" justify-content-center">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Categories</h1>
+                <p id="p">This is a list of all the donation categories that you applied to</p>
+            </div>
+        </div> 
+        <br>
+        <div class="col-12  justify-content-center" >
+            <div class="col-12"  *ngFor="let m of categories">
+                <div id="categories">
+                <mat-card>
+                    <mat-card-content>
+                        <p>Category name: {{m.name}}</p>
+                        <p>You have recived <b>CEKA BEKEND</b> amount of this donation</p>
+                        <button (click)="Remove(id, m.id)" class="remove">Remove my application</button>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <br>
+            </div>
+            <button  (click)="Apply(id)" id="button">Apply to new category</button>
+        </div>
+    </div>
+</section>

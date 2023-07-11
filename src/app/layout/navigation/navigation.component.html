@@ -35,12 +35,14 @@
              <span><a  mat-menu-item  (click)="ChangeVisibility(user.id)" routerLinkActive="active" *ngIf="userService.isDonator()">Change anonimity status</a></span>
              <button mat-menu-item routerLink="/" (click)="logout()">Logout</button>
         </mat-menu>
-        <button *ngIf="userService.isDonator() || userService.isOwner()" mat-button [matMenuTriggerFor]="menu2" class="menu">
-            <mat-icon>hotel</mat-icon>
+        <button *ngIf="userService.isLogedIn()" mat-button [matMenuTriggerFor]="menu2" class="menu">
+            <mat-icon>volunteer_activism</mat-icon>
         </button>
         <mat-menu #menu2="matMenu">
-            <span><a  mat-menu-item routerLink="/addAcc" *ngIf="userService.isOwner()"  routerLinkActive="active">Add accommodation unit</a></span>
-          </mat-menu>
+            <span><a  mat-menu-item (click)="openCategories(user.id)" *ngIf="userService.isBenefitiary()"  routerLinkActive="active">My categories</a></span>
+            <span><a  mat-menu-item  routerLink="/categories" *ngIf="userService.isOwner()"  routerLinkActive="active">Categories</a></span>
+        
+        </mat-menu>
     </div>
 </nav>
 

@@ -42,14 +42,17 @@ export class NavigationComponent implements OnInit{
   logout(){
     this.userService.logout();
   }
-  openInfo(id: number){
+  openInfo(id: string){
     this.router.navigate([`/edit-profile/${id}`])
   }
-  ChangePassword(id: number){
+  ChangePassword(id: string){
     this.router.navigate([`/change-password/${id}`])
   }
-  ChangeVisibility(id: number){
+  ChangeVisibility(id: string){
     this.router.navigate([`/change-status/${id}`])
+  }
+  openCategories(id: string){
+    this.router.navigate([`/my-categories/${id}`])
   }
   
 }

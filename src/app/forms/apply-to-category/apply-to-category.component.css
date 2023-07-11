@@ -1,0 +1,50 @@
+button{
+    margin: 0 auto;
+    display: block;
+    width: 45%;
+    max-width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f19f10;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+button:hover {
+  background-color: #FB6107
+  }
+span{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+form {
+    border: 3px solid #f3df2c98;
+    width: 40%;
+    margin:auto;
+    margin-top: 40px;
+    margin-bottom: 40px ;
+  }
+  .form-group{
+    padding: 15px;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .card{
+    border: none;
+  }
+  .disclaimer{
+    font-size: 12px;
+    color: #FB6107;
+    text-align: center;
+    margin-top: 20px;
+  }

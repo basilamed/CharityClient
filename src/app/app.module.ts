@@ -24,6 +24,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { ConfirmationComponent } from './confirmation/confirmation/confirmation.component';
 import { UsersToApproveComponent } from './pages/users-to-approve/users-to-approve.component';
 import { ChangeStatusComponent } from './pages/change-status/change-status.component';
+import { AddCategoryComponent } from './forms/add-category/add-category.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
+import { ApplyToCategoryComponent } from './forms/apply-to-category/apply-to-category.component';
+import { MyCategoriesComponent } from './pages/my-categories/my-categories.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +43,10 @@ import { ChangeStatusComponent } from './pages/change-status/change-status.compo
     ConfirmationComponent,
     UsersToApproveComponent,
     ChangeStatusComponent,
+    AddCategoryComponent,
+    CategoriesComponent,
+    ApplyToCategoryComponent,
+    MyCategoriesComponent,
     
   ],
   imports: [

@@ -1,0 +1,25 @@
+<div class="container">
+    <form [formGroup]="form"> 
+      <div class="row">
+        <div class="text-center"> 
+          <br>
+          <h1 class="text-theme-primary">Add Category</h1>
+          <p>Please fill in this form to add a donation category</p>
+        </div>
+      </div> 
+          <div>  
+                <div class="form-group">
+                  <label for="name">Category name</label>
+                  <input formControlName="name" type="text" class="form-control" id="category" placeholder="Enter the category name">
+                  <div *ngIf="Name?.touched && Name?.invalid">
+                    <p *ngIf="Name?.errors?.['required']" class="errors">Category name is required</p>
+                  </div>
+                </div>
+                <br>
+               <span><button (click)="openConfirmationDialog()" [disabled]="!form.valid">Add Donation Category</button></span>
+              </div>
+          </form> 
+        </div>
+              
+      <br>
+      <br>

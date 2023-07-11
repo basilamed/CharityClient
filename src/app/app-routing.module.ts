@@ -9,6 +9,10 @@ import { EditProfileComponent } from './forms/edit-profile/edit-profile.componen
 import { ChangePasswordComponent } from './forms/change-password/change-password.component';
 import { UsersToApproveComponent } from './pages/users-to-approve/users-to-approve.component';
 import { ChangeStatusComponent } from './pages/change-status/change-status.component';
+import { AddCategoryComponent } from './forms/add-category/add-category.component';
+import { ApplyToCategoryComponent } from './forms/apply-to-category/apply-to-category.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
+import { MyCategoriesComponent } from './pages/my-categories/my-categories.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -17,7 +21,11 @@ const routes: Routes = [
   { path: 'edit-profile/:id', component: EditProfileComponent},
   { path: 'change-password/:id', component: ChangePasswordComponent},
   { path: 'approve', component: UsersToApproveComponent, canActivate: [RoleGuard], data: {allowedRole: 1}},
-  { path: 'change-status/:id', component: ChangeStatusComponent, canActivate: [RoleGuard], data: {allowedRole: 3}}
+  { path: 'change-status/:id', component: ChangeStatusComponent, canActivate: [RoleGuard], data: {allowedRole: 3}},
+  { path: 'add-category', component: AddCategoryComponent, canActivate: [RoleGuard], data: {allowedRole: 1}},
+  { path: 'apply-to-category/:id', component: ApplyToCategoryComponent, canActivate: [RoleGuard], data: {allowedRole: 4}},
+  { path: 'categories', component: CategoriesComponent},
+  { path: 'my-categories/:id', component: MyCategoriesComponent, canActivate: [RoleGuard], data: {allowedRole: 4}}
 
 
 ];
