@@ -18,7 +18,13 @@
                     <a  class="nav-link" *ngIf="userService.isBenefitiary()">Recived Donations</a>
                 </li>
                 <li class="nav-item mr-5" *ngIf="userService.isCourier()">
-                    <a routerLink="/receipts" class="nav-link" *ngIf="userService.isCourier()">Donations and Benefitiaries</a>
+                    <a  class="nav-link" *ngIf="userService.isCourier()">Donations and Benefitiaries</a>
+                </li> 
+                <li class="nav-item mr-5" *ngIf="userService.isDonator()">
+                    <a (click)="Donations(user.id)" class="nav-link" *ngIf="userService.isDonator()">My Donations</a>
+                </li> 
+                <li class="nav-item mr-5" *ngIf="userService.isDonator()">
+                    <a (click)="Donate(user.id)" class="nav-link" *ngIf="userService.isDonator()">DONATE</a>
                 </li> 
             </ul>
         </div>

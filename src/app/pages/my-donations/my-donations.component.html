@@ -1,0 +1,28 @@
+<section class="featured-section col-md-6 " id="section">
+    <div class=" justify-content-center">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>My Donations</h1>
+                <p id="p">This is a list of all the donation that you have made</p>
+            </div>
+        </div> 
+        <br>
+        <div class="col-12  justify-content-center" >
+            <div class="col-12"  *ngFor="let m of donations">
+                <div id="categories">
+                <mat-card>
+                    <mat-card-content>
+                        <p>Date of donation: {{m.donationDate | date:"dd/MM/YYYY"}}</p>
+                        <p>Amount you donated: {{m.donationAmount}}$</p>
+                        <p>Amount leftover from this donation: {{m.leftoverAmount}}$</p>
+                        <p>Category name: {{m.category.name}}</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <br>
+            </div>
+            <button (click)="Add()" id="button">Donate Again</button>
+        </div>
+    </div>
+</section>
+ 

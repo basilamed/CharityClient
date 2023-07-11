@@ -54,5 +54,11 @@ export class NavigationComponent implements OnInit{
   openCategories(id: string){
     this.router.navigate([`/my-categories/${id}`])
   }
+  Donations(id: string){
+    this.router.navigate([`/my-donations/${id}`])
+  }
+  Donate(id: string){
+    this.router.navigate([`/add-donation/${id}`])
+  }
   
 }
