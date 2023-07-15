@@ -1,0 +1,41 @@
+<div class="container">
+    <form [formGroup]="form">
+        <div class="text-center">
+          <br> 
+          <h1 class="text-theme-primary">Donate to the user</h1>
+          <p>Please fill out the form to donate to the user</p>
+          <p *ngIf="total > 0">The user has recived {{total}} $ in this category</p>
+          <p *ngIf="total == 0">The user has not recived any money in this category</p>
+        </div>
+<div class="">
+    <div class="card">
+      <div class="card-body" *ngIf="donations.length > 0">
+        <div class="form-group" >
+          <label>Select Donation:</label>
+          <select formControlName="donationId" class="form-control" id="donationId" (change)="onSelectionChange($event)">
+            <option *ngFor="let i of donations" [value]="i.donationId">Donated on {{i.donationDate | date:'dd/MM/YYYY'}} 
+              and the leftover amount is {{ i.leftoverAmount }} $</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="amount">Amount that you want to donate</label>
+            <input formControlName="amount" type="number" class="form-control" id="floor" placeholder="Enter the amount to donate">
+            <div *ngIf="Amount?.touched && Amount?.invalid">
+              <p *ngIf="Amount?.errors?.['required']" class="errors">Amount is required</p>
+              <p *ngIf="Amount?.errors?.['min']" class="errors">Amount has to be greater than 0</p>
+              <p *ngIf="Amount?.errors?.['max']" class="errors">Amount has to less than {{selectedAmount}}</p>
+            </div>
+          </div>
+        <button (click)="openConfirmationDialog()">Donate to user</button>
+      </div>
+      <div class="card-body" *ngIf="donations.length == 0">
+        <p class="text-center">There are no donations avalible in this category. You can go back to the page with all of the benefitiaries.</p>
+        <button (click)="GoBack()">Go back to list of benefitiaries</button>
+      </div>
+    </div>
+  </div>
+</form>
+<br>
+<br>
+</div>

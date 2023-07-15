@@ -15,10 +15,10 @@
                     <a routerLink="/approve" class="nav-link" *ngIf="userService.isOwner()">Users To Approve</a>
                 </li>
                 <li class="nav-item mr-5" *ngIf="userService.isBenefitiary()">
-                    <a  class="nav-link" *ngIf="userService.isBenefitiary()">Recived Donations</a>
+                    <a (click)="RecivedDonations(user.id)" class="nav-link" *ngIf="userService.isBenefitiary()">Recived Donations</a>
                 </li>
                 <li class="nav-item mr-5" *ngIf="userService.isCourier()">
-                    <a  class="nav-link" *ngIf="userService.isCourier()">Donations and Benefitiaries</a>
+                    <a routerLink="/list-of-benefitiaries" class="nav-link" *ngIf="userService.isCourier()">Benefitiaries in need</a>
                 </li> 
                 <li class="nav-item mr-5" *ngIf="userService.isDonator()">
                     <a (click)="Donations(user.id)" class="nav-link" *ngIf="userService.isDonator()">My Donations</a>

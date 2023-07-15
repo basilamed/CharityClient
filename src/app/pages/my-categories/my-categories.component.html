@@ -8,12 +8,13 @@
         </div> 
         <br>
         <div class="col-12  justify-content-center" >
-            <div class="col-12"  *ngFor="let m of categories">
+            <div class="col-12"  *ngFor="let m of categories; let i = index">
                 <div id="categories">
                 <mat-card>
                     <mat-card-content>
                         <p>Category name: {{m.name}}</p>
-                        <p>You have recived <b>CEKA BEKEND</b> amount of this donation</p>
+                        <p *ngIf="totals[i] > 0">You have recived <b>{{totals[i]}}$</b> of this donation</p>
+                        <p *ngIf="totals[i] == 0">You have recived this donation yet</p>
                         <button (click)="Remove(id, m.id)" class="remove">Remove my application</button>
                     </mat-card-content>
                 </mat-card>

@@ -16,6 +16,9 @@ import { MyCategoriesComponent } from './pages/my-categories/my-categories.compo
 import { MyDonationsComponent } from './pages/my-donations/my-donations.component';
 import { DonationDetailsComponent } from './pages/donation-details/donation-details.component';
 import { AddDonationComponent } from './forms/add-donation/add-donation.component';
+import { ListOfBenefitiariesComponent } from './pages/list-of-benefitiaries/list-of-benefitiaries.component';
+import { DonateComponent } from './forms/donate/donate.component';
+import { RecivedDonationsComponent } from './pages/recived-donations/recived-donations.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -31,8 +34,10 @@ const routes: Routes = [
   { path: 'my-categories/:id', component: MyCategoriesComponent, canActivate: [RoleGuard], data: {allowedRole: 4}},
   { path: 'my-donations/:id', component: MyDonationsComponent, canActivate: [RoleGuard], data: {allowedRole: 3}},
   { path: 'donation-details/:id', component: DonationDetailsComponent},
-  { path: 'add-donation/:id', component: AddDonationComponent, canActivate: [RoleGuard], data: {allowedRole: 3}}
-
+  { path: 'add-donation/:id', component: AddDonationComponent, canActivate: [RoleGuard], data: {allowedRole: 3}},
+  { path: 'list-of-benefitiaries', component: ListOfBenefitiariesComponent, canActivate: [RoleGuard], data: {allowedRole: 2}},
+  { path: 'donate/:id/:category', component: DonateComponent, canActivate: [RoleGuard], data: {allowedRole: 2}},
+  { path : 'recived-donations/:id', component: RecivedDonationsComponent, canActivate: [RoleGuard], data: {allowedRole: 4}}
 
 ];
 

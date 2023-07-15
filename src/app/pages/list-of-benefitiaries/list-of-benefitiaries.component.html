@@ -1,0 +1,38 @@
+<section class="featured-section col-md-8" id="section">
+    <div>
+        <div class="row"> 
+            <div class="col-md-12 text-center">
+                <h1>Users</h1>
+                <p id="p">This is a list of all benefitiaries. 
+                    The most urgent in need of donations have a <b>red</b> border,
+                     the ones that have less than 5 donations have a <b>yellow</b> 
+                     and the ones that have a <b>green</b> border have recived 5+ donations.</p>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center" id="users">
+            <div class="col-lg-5" *ngFor="let u of users">
+                <div [ngClass]="{
+                    'special-user-1': u.donation.length > 0,
+                    'special-user-2': u.donation.length == 0,
+                    'special-user-3': u.donation.length > 5
+                  }">
+                <mat-card>
+                    <mat-card-content class="content">
+                        <div>
+                            <p>Name: {{u.firstName}}</p>
+                            <p>Last name: {{u.lastName}}</p>
+                        </div>
+                        <div class="dugmici">
+                            <div *ngFor="let categories of u.categories">
+                                <button (click)="AddDonation(u.id, categories.categoryId)" >Donate {{categories.category.name}}</button>
+                            </div>  
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <br>
+            </div>
+        </div>
+    </div>
+</section>

@@ -87,10 +87,10 @@ get Birthday() {
       this.userService.register(dto).subscribe((data: any) => {
         console.log('User registered successfully:', data);
         if(dto.roleId === 4){
-          this.router.navigate(['/login'] , { queryParams: { success: 'true' } });
+          this.router.navigate(['/login'] , { queryParams: { success2: 'true' } });
         }
         else{
-          this.router.navigate(['/login'] , { queryParams: { success2: 'true' } });
+          this.router.navigate(['/login'] , { queryParams: { success: 'true' } });
         }
         this.loading = false;
       },

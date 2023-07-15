@@ -1,0 +1,49 @@
+#section{
+    margin: auto;
+}
+h1{
+    text-align: center;
+    margin-top: 40px;
+}
+.special-user-2{
+    border: 2px solid #ff0808;
+    box-shadow: 2px 2px 4px  #8e7349;
+
+}
+.special-user-1{
+    border: 2px solid #eeff32;
+    box-shadow: 2px 2px 4px  #8f8585;
+
+}
+.special-user-3{
+    border: 2px solid #5ffd0a;
+    box-shadow: 2px 2px 4px  #4efd0e;
+
+}
+#p{
+    width: 60%;
+    margin: 25px auto;
+    text-align: center;
+}
+.dugmici{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+}
+button{
+    width: 90%;
+    padding: 10px;
+    margin: 7px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f19f10;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+button:hover {
+  background-color: #FB6107
+  }

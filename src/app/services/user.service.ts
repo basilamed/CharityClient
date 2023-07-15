@@ -114,6 +114,12 @@ export class UserService {
   changeStatus(id: string){
     return this.http.put(`${this.url}/User/change-visibility/${id}`, {});
   }
+  getUsersWithCategories(){
+    return this.http.get(`${this.url}/User/get-all-benefitiaries-with-categories`);
+  }
+  getDonationsByUserId(id: string){
+    return this.http.get(`${this.url}/User/get-user-donations-by-id/${id}`);
+  }
 }
 export interface RegisterDto {
   firstName: string;
