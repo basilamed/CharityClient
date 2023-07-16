@@ -34,6 +34,8 @@ import { DonationDetailsComponent } from './pages/donation-details/donation-deta
 import { ListOfBenefitiariesComponent } from './pages/list-of-benefitiaries/list-of-benefitiaries.component';
 import { DonateComponent } from './forms/donate/donate.component';
 import { RecivedDonationsComponent } from './pages/recived-donations/recived-donations.component';
+import { SendThankYouNoteComponent } from './forms/send-thank-you-note/send-thank-you-note.component';
+import { RecivedNotesComponent } from './pages/recived-notes/recived-notes.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { RecivedDonationsComponent } from './pages/recived-donations/recived-don
     ListOfBenefitiariesComponent,
     DonateComponent,
     RecivedDonationsComponent,
+    SendThankYouNoteComponent,
+    RecivedNotesComponent,
     
   ],
   imports: [

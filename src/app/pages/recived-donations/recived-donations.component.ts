@@ -39,6 +39,8 @@ export class RecivedDonationsComponent {
         console.log(err)
     })
   }
-
+ Note(id:number, dbid:number){
+  this.Router.navigate([`/send-thank-you-note/${this.id}/${id}/${dbid}`])
+ }
 }
  

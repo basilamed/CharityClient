@@ -14,6 +14,8 @@
                     <mat-card-content>
                         <p>The amount you recived: {{m.amount}}$</p>
                         <p>Donation date: {{m.date | date: 'dd/MM/YYYY'}}</p>
+                        <p>The donation category: {{m.donation.category.name}}</p>
+                        <button *ngIf="m.donation.donator.status == false" (click)="Note(m.id, m.donationId)">Send thank you note</button>
                     </mat-card-content>
                 </mat-card>
             </div>

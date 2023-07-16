@@ -63,5 +63,8 @@ export class NavigationComponent implements OnInit{
   RecivedDonations(id: string){
     this.router.navigate([`/recived-donations/${id}`])
   }
+  RecivedNotes(id: string){
+    this.router.navigate([`/recived-notes/${id}`])
+  }
   
 }

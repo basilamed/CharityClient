@@ -1,0 +1,30 @@
+<section class="featured-section col-md-6 " id="section">
+    <div class=" justify-content-center">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Recived notes</h1>
+                <p *ngIf="notes.length > 0" id="p">This is a list of all the notes you have recived</p>
+                <p *ngIf="notes.length === 0">You have no notes to read.</p>
+            </div>
+        </div> 
+        <br>
+        <div class="col-12  justify-content-center" *ngIf="notes.length > 0">
+            <div class="col-12"  *ngFor="let m of notes; let i = index">
+                <div id="categories">
+                <mat-card>
+                    <mat-card-content>
+                        <p>The note text: {{m.text}}</p>
+                        <p>Date when the note was sent: {{m.dateTime | date: 'dd/MM/YYYY'}}</p>
+                        <ng-container *ngFor="let star of getStars(m.review)">
+                            <mat-icon class="zvezdica">star</mat-icon>
+                        </ng-container>
+                        <button (click)="See(m.notes[0].id)">Mark message as seen</button>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <br>
+        </div>
+        </div>
+    </div>
+</section>
+

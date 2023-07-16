@@ -47,6 +47,7 @@
         <mat-menu #menu2="matMenu">
             <span><a  mat-menu-item (click)="openCategories(user.id)" *ngIf="userService.isBenefitiary()"  routerLinkActive="active">My categories</a></span>
             <span><a  mat-menu-item  routerLink="/categories" *ngIf="userService.isOwner()"  routerLinkActive="active">Categories</a></span>
+            <span><a  mat-menu-item  (click)="RecivedNotes(user.id)" *ngIf="userService.isDonator()"  routerLinkActive="active">Recived Notes</a></span>
         
         </mat-menu>
     </div>

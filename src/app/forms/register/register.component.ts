@@ -68,7 +68,8 @@ get Birthday() {
     const birthdayValue = this.Birthday?.value;
     const birthday = birthdayValue ? new Date(Date.parse(birthdayValue)) : datum;
     const statusValue = this.Status?.value;
-    const status = statusValue ? (statusValue === 'true') : false;
+    const status = statusValue ? (statusValue === 'true') : (statusValue === 'false' ? false : true);
+
     if(this.form.valid){
       const dto: RegisterDto = {
         firstName: this.Fname?.value ?? '',
