@@ -8,11 +8,13 @@ h1{
 #categories{
     margin-top: 20px;
     box-shadow: 2px 2px 6px #c3c3c3;
+    border: #f19f10 3px solid;
+    border-radius: 5px;
 }
   button{
     margin: 20px auto;
     display: block;
-    width: 30%;
+    width: 100%;
     max-width: 300px;
     padding: 10px;
     border: none;
@@ -22,8 +24,22 @@ h1{
     font-weight: 500;
     cursor: pointer;
 }
-button:hover {
+button:hover , #dugmence:hover{
     background-color: #7CB518;
+}
+#dugmence{
+  background-color: #FB6107;
+}
+#donacije {
+    margin: 20px auto;
+    display: block;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+    font-weight: 400;
+    cursor: pointer;
 }
 .remove{
     background-color: #FB6107;
@@ -39,3 +55,35 @@ button:hover {
     opacity: 0.9;
     background-color: #FB6107;
 }
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .filter-group {
+    margin: 10px;
+  }
+  
+  .filter-group label {
+    display: block;
+    color: #0f283c;
+    font-weight: bold;
+  }
+  
+  input[type="date"],
+  input[type="number"],
+  select {
+    border: none;
+    border-bottom: 2px solid #0f283c;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+    color: #0f283c;
+  }
+  
+  input[type="date"]::placeholder,
+  input[type="number"]::placeholder,
+  select {
+    color: #c3c3c3;
+  }
