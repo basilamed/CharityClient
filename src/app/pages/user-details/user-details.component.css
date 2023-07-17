@@ -1,0 +1,34 @@
+img{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    box-shadow: 2px 2px 2px 2px #8f8585;
+    
+  }
+  #slikice{
+    display: flex;
+    justify-content: space-around;
+  }
+  .container{
+      margin:auto;
+      border: 2px solid #f3df2c98;;
+      width: 30%;
+      padding: 20px;
+  }
+  button{
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FB6107;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  span{
+    display: flex;
+    justify-content: space-around;
+  }

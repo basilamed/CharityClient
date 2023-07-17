@@ -21,6 +21,9 @@ import { DonateComponent } from './forms/donate/donate.component';
 import { RecivedDonationsComponent } from './pages/recived-donations/recived-donations.component';
 import { SendThankYouNoteComponent } from './forms/send-thank-you-note/send-thank-you-note.component';
 import { RecivedNotesComponent } from './pages/recived-notes/recived-notes.component';
+import { UsersComponent } from './pages/users/users.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { TotalsComponent } from './pages/totals/totals.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -41,7 +44,10 @@ const routes: Routes = [
   { path: 'donate/:id/:category', component: DonateComponent, canActivate: [RoleGuard], data: {allowedRole: 2}},
   { path: 'recived-donations/:id', component: RecivedDonationsComponent, canActivate: [RoleGuard], data: {allowedRole: 4}},
   { path: 'send-thank-you-note/:id/:db_id/:d_id', component: SendThankYouNoteComponent, canActivate: [RoleGuard], data: {allowedRole: 4}},
-  { path: 'recived-notes/:id', component: RecivedNotesComponent, canActivate: [RoleGuard], data: {allowedRole: 3}}
+  { path: 'recived-notes/:id', component: RecivedNotesComponent, canActivate: [RoleGuard], data: {allowedRole: 3}},
+  { path: 'users', component: UsersComponent, canActivate: [RoleGuard], data: {allowedRole: 1}},
+  { path: 'user-details/:id', component: UserDetailsComponent, canActivate: [RoleGuard], data: {allowedRole: 1}},
+  { path: 'totals', component: TotalsComponent, canActivate: [RoleGuard], data: {allowedRole: 2}}
 
 ];
 

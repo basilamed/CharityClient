@@ -1,0 +1,29 @@
+<section class="featured-section col-md-8" id="section">
+    <div>
+        <div class="row"> 
+            <div class="col-md-12 text-center">
+                <h1>Users</h1>
+                <p id="p">This is a list of all active users. The courriers have a yellow border,
+                     the donators a red border and the benefitiaries have a green border.</p>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center" id="users">
+            <div class="col-lg-5"  *ngFor="let u of users">
+                <div (click)="openInfo(u.id)" [ngClass]="{
+                    'special-user-1': u.roleId === 4,
+                    'special-user-2': u.roleId === 2,
+                    'special-user-3': u.roleId === 3
+                  }">
+                <mat-card>
+                    <mat-card-content>
+                        <p>Name: {{u.firstName}}</p>
+                        <p>Last name: {{u.lastName}}</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <br>
+            </div>
+        </div>
+    </div>
+</section>

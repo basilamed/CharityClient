@@ -23,6 +23,12 @@ export class DonationService {
   getDonationsByCategoryId(id: number){
     return this.http.get(`${this.url}/Donation/donation-by-category-id/${id}`);
   }
+  getTotalByCategoryId(id: number){
+    return this.http.get(`${this.url}/Donation/get-total-by-category-id/${id}`);
+  }
+  getLeftoverByCategoryId(id: number){
+    return this.http.get(`${this.url}/Donation/get-leftover-by-category-id/${id}`);
+  }
   addDonation(dto: DonationDto){
     return this.http.post(`${this.url}/Donation/add-donation`, dto);
   }

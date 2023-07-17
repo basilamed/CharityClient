@@ -1,0 +1,27 @@
+#section{
+    margin: auto;
+}
+h1{
+    text-align: center;
+    margin-top: 40px;
+}
+.special-user-2{
+    border: 2px solid #F3DE2C;
+    box-shadow: 2px 2px 4px  #f4e34b90;
+
+}
+.special-user-1{
+    border: 2px solid #5C8001;
+    box-shadow: 2px 2px 4px  #a0d51894;
+
+}
+.special-user-3{
+    border: 2px solid #FB6107;
+    box-shadow: 2px 2px 4px  #f5803c89;
+
+}
+#p{
+    width: 60%;
+    margin: 25px auto;
+    text-align: center;
+}

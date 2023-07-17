@@ -97,7 +97,7 @@ export class UserService {
   }
   
   deleteUser(id: string){
-    return this.http.delete(`${this.url}/User/delete/${id}`);
+    return this.http.delete(`${this.url}/User/delete-user/${id}`);
   }
   changePassword(id: string, dto: Pass){
     return this.http.put(`${this.url}/User/change-password/${id}`, dto);

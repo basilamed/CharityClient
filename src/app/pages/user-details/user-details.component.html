@@ -1,0 +1,24 @@
+<div class="section p-5" id="sec">
+    <div class="container">
+        <span><h1 class="">{{userDetails.firstName}} {{userDetails.lastName}}</h1></span>
+       
+        <div id="slikice">
+          <ng-container *ngIf="userDetails.image != null">
+            <img [src]="userDetails.image">
+          </ng-container>
+          
+          <ng-container *ngIf="userDetails.image === null">
+            <img src="../../../assets/images/profile.jpg" alt="Fallback Image" *ngIf="userDetails.image === null">
+          </ng-container>
+        </div>
+        <br>
+        <p>Name: {{userDetails.firstName}}</p>
+        <p>Last name: {{userDetails.lastName}}</p>
+        <p>Address: {{userDetails.address}}</p>
+        <p>City: {{userDetails.city}}</p>
+        <p>Email: {{userDetails.userName}}</p>
+        <p>Birthday: {{userDetails.birthday | date:"dd/MM/YYYY"}}</p>
+        </div>
+        
+    
+</div>

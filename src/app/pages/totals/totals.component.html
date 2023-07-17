@@ -1,0 +1,50 @@
+<div class="table">
+    <br>
+    <h1>Table of totals</h1>
+    <br>
+    <p id="confidential">THE DATA IN THIS TABLE IS STRICTLY CONFIDENTIAL</p>
+    <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Leftover Amount</th>
+            <th>Total Donated Amount</th>
+            <th>Number of users that applied</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let category of categories; let i = index">
+            <td>{{ category.name }}</td>
+            <td>{{ leftovers[i] }} $</td>
+            <td>{{ totals[i] }} $</td>
+            <td>{{ usersCount[i] }}</td>
+    
+          </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="text">
+    <h3>Your Responsibilities</h3>
+    <br>
+    <ul>
+      <li>Maintain a professional and compassionate demeanor while interacting with donors and beneficiaries.</li>
+      <li>Adhere to all safety guidelines and protocols during transportation and delivery.</li>
+      <li>Keep accurate records of donations received and delivered.</li>
+    </ul>
+    
+    <h3>Tips for Success</h3>
+    <br>
+    <ul>
+      <li>Always double-check donation details and delivery instructions to ensure accuracy.</li>
+      <li>Communicate promptly with our team regarding any changes in schedules or issues during deliveries.</li>
+      <li>Handle donations with care and respect, as they represent the generosity and compassion of our donors.</li>
+      <li>Take breaks and stay hydrated during your routes to maintain your well-being.</li>
+      <li>Report any concerns, incidents, or feedback to our designated point of contact.</li>
+    </ul>
+    
+    <p>We appreciate your dedication and commitment to our charity's mission. Your hard work and compassion help us make a positive impact on the lives of those in need.</p>
+    
+    <p>If you have any questions or need assistance, please don't hesitate to reach out to our team. Thank you again for being an essential part of our charity's courier service.</p>
+    <br> 
+</div>

@@ -1,0 +1,33 @@
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 30px auto;
+  }
+  
+  table th, table td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+  }
+  
+  table tbody tr:hover {
+    background-color: #ffebdf;
+  }
+  .text{
+    width: 60%;
+    margin: auto;
+    text-align: justify;
+    color: rgb(2, 23, 0);
+
+  }
+  h3, h1{
+    text-align: center;
+  }
+  #confidential{
+    text-align: center;
+    color: #FB6107;
+  }

@@ -32,6 +32,9 @@ export class CategoryService {
   removeUserFromCategory(dto: CategoryWithUsersDto){
     return this.http.post(`${this.url}/Category/remove-user-category`, dto);
   } 
+  getUserCountByCategoryId(id: number){
+    return this.http.get(`${this.url}/Category/get-user-count-by-category-id/${id}`);
+  }
 }
 export interface CategoryDto{
   name: string;
