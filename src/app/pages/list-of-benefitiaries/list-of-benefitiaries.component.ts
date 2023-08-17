@@ -16,7 +16,6 @@ export class ListOfBenefitiariesComponent implements OnInit{
     ngOnInit(): void {
       this.userService.getUsersWithCategories().subscribe((res: any) => {
         this.users = res;
-        console.log(this.users)
       },
       err => {
         console.log(err)

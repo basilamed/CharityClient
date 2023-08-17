@@ -35,7 +35,6 @@ export class AddDonationComponent {
       this.id = String(params.get('id') ??'');
       this.categoryService.getAllCategories().subscribe(data => {
         this.categories = data;
-        console.log(this.categories)
       },
         err => {
           console.log(err)

@@ -24,6 +24,7 @@ import { RecivedNotesComponent } from './pages/recived-notes/recived-notes.compo
 import { UsersComponent } from './pages/users/users.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { TotalsComponent } from './pages/totals/totals.component';
+import { SentNotesComponent } from './pages/sent-notes/sent-notes.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -47,7 +48,9 @@ const routes: Routes = [
   { path: 'recived-notes/:id', component: RecivedNotesComponent, canActivate: [RoleGuard], data: {allowedRole: 3}},
   { path: 'users', component: UsersComponent, canActivate: [RoleGuard], data: {allowedRole: 1}},
   { path: 'user-details/:id', component: UserDetailsComponent, canActivate: [RoleGuard], data: {allowedRole: 1}},
-  { path: 'totals', component: TotalsComponent, canActivate: [RoleGuard], data: {allowedRole: 2}}
+  { path: 'totals', component: TotalsComponent, canActivate: [RoleGuard], data: {allowedRole: 2}},
+  { path: 'sent-notes/:id', component: SentNotesComponent, canActivate: [RoleGuard], data: {allowedRole: 4}}
+
 
 ];
 

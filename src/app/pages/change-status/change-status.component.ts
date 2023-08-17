@@ -26,7 +26,6 @@ export class ChangeStatusComponent implements OnInit {
       this.id = String(params.get('id') ?? "");
       this.userService.getUserById(this.id).subscribe(data => {
         this.user = data;
-        console.log(this.user)
       },
         err => {
           console.log(err)

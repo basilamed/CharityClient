@@ -29,7 +29,6 @@ export class RecivedDonationsComponent {
       this.id = String(params.get('id') ?? '');
       this.userService.getDonationsByUserId(this.id).subscribe(data => {
         this.donations = data;
-        console.log(this.donations)
       },
         err => {
           console.log(err)

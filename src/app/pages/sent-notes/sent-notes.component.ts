@@ -4,11 +4,11 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-recived-notes',
-  templateUrl: './recived-notes.component.html',
-  styleUrls: ['./recived-notes.component.css']
+  selector: 'app-sent-notes',
+  templateUrl: './sent-notes.component.html',
+  styleUrls: ['./sent-notes.component.css']
 })
-export class RecivedNotesComponent {
+export class SentNotesComponent {
 
   notes:any  = [];
   id:string = '';
@@ -19,7 +19,7 @@ export class RecivedNotesComponent {
   ngOnInit(): void {
     this.Router.paramMap.subscribe(params => {
       this.id = String(params.get('id') ?? '');
-      this.noteService.getAllNotesByDonatorId(this.id).subscribe(data => {
+      this.noteService.getAllNotesByUserId(this.id).subscribe(data => {
         this.notes = data as any;
         console.log(this.notes)
         console.log(this.notes.length)

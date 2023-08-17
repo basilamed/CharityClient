@@ -30,14 +30,11 @@ export class MyCategoriesComponent {
       this.id = String(params.get('id') ??'');
       this.categoryService.getCategoryByUserId(this.id).subscribe(data => {
         this.categories = data;
-        console.log(this.categories)
           this.id = String(params.get('id') ??'');
           this.categories.forEach((category: { id: number; }) => {
             this.donationService.getTotal(this.id, category.id).subscribe(total => {
               
-              console.log(`Total for category ${category.id}: ${total}`);
               this.totals.push(total);
-              console.log(this.totals);
             }, error => {
               console.log(error);
             });

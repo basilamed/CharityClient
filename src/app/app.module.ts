@@ -40,6 +40,7 @@ import { RecivedNotesComponent } from './pages/recived-notes/recived-notes.compo
 import { UsersComponent } from './pages/users/users.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { TotalsComponent } from './pages/totals/totals.component';
+import { SentNotesComponent } from './pages/sent-notes/sent-notes.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { TotalsComponent } from './pages/totals/totals.component';
     UsersComponent,
     UserDetailsComponent,
     TotalsComponent,
+    SentNotesComponent,
     
   ],
   imports: [

@@ -58,7 +58,6 @@ export class MyDonationsComponent {
     this.donationService.getFilteredDonations(this.filters, this.id).subscribe((res: any) => {
       this.donations = res.items;
       this.totalItems = res.totalItems;
-      console.log(this.donations);
     }, err => {
       console.log(err);
     });
@@ -74,7 +73,7 @@ export class MyDonationsComponent {
     if (this.filters.dateOfDonation) {
       const periodOfDate = new Date(this.filters.dateOfDonation);
       this.filters.dateOfDonation = `${periodOfDate.getMonth() + 1}-${periodOfDate.getDate()}-${periodOfDate.getFullYear()}`;
-      console.log(this.filters.dateOfDonation);
+      
     }
   
     this.loadDonations();
